@@ -1,0 +1,87 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext("2d");
+
+	pincel.fillStyle = "green";
+	pincel.fillRect(0, 0, 600, 400);
+
+	pincel.fillStyle = "yellow";
+	pincel.beginPath();
+	pincel.moveTo(300, 50);
+	pincel.lineTo(50, 200);
+	pincel.lineTo(550, 200);
+	pincel.fill();
+	
+	pincel.beginPath();
+	pincel.moveTo(300, 350);
+	pincel.lineTo(50, 200);
+	pincel.lineTo(550, 200);
+	pincel.fill();
+
+	pincel.fillStyle = "darkblue";
+	pincel.beginPath();
+	pincel.arc(300, 200, 100, 0, 2* 3.14);
+	pincel.fill();
+	
+	
+	function desenhaEstrela(x, y){
+		pincel.beginPath();
+		pincel.fillStyle = "white";
+		pincel.moveTo(x, y-5);
+		pincel.lineTo(x-1, y-1);
+		pincel.lineTo(x-5, y-1);
+		pincel.lineTo(x-2, y+1);
+		pincel.lineTo(x-3, y+5);
+		pincel.lineTo(x, y+3);
+		pincel.lineTo(x+3, y+5);
+		pincel.lineTo(x+2, y+1);
+		pincel.lineTo(x+5, y-1);
+		pincel.lineTo(x+1, y-1);
+		pincel.fill();
+	}
+	
+	desenhaEstrela(340, 170);
+	desenhaEstrela(210, 220);
+	desenhaEstrela(232, 261);
+	desenhaEstrela(244, 253);
+	desenhaEstrela(251, 275);
+	desenhaEstrela(263, 263);
+	desenhaEstrela(265, 285);
+	desenhaEstrela(270, 231);
+	desenhaEstrela(325, 218);
+	desenhaEstrela(304, 242);
+	desenhaEstrela(284, 253);
+	desenhaEstrela(296, 259);
+	desenhaEstrela(290, 235);
+	desenhaEstrela(301, 281);
+	desenhaEstrela(320, 268);
+	desenhaEstrela(326, 284);
+	desenhaEstrela(340, 276);
+	desenhaEstrela(341, 256);
+	desenhaEstrela(350, 264);
+	desenhaEstrela(352, 274);
+	desenhaEstrela(362, 256);
+	desenhaEstrela(369, 244);
+	desenhaEstrela(378, 232);
+	desenhaEstrela(342, 230);
+	desenhaEstrela(381, 217);
+	desenhaEstrela(363, 229);
+	desenhaEstrela();
+	desenhaEstrela();
+	
+	pincel.fillStyle = "white";
+	
+	pincel.fillRect(200, 187, 200, 25)
+	
+	function escrever(texto, x, y) {
+
+		pincel.fillStyle = "black";
+		pincel.fillText(texto, x, y);
+	}
+
+	escrever("ORDEM E PROGRESSOS", 240, 202);
+
+</script>
